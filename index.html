@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Todo App</h1>
+
+    <!-- 통계 -->
+    <div class="stats">
+      <span id="stats">완료 0 / 전체 0</span>
+      <button id="clearCompleted">완료 삭제</button>
+    </div>
+
+    <!-- 입력 영역 -->
+    <div class="input-section">
+      <div class="input-row">
+        <input id="todoInput" type="text" placeholder="할 일을 입력하세요">
+        <button id="addBtn">추가</button>
+      </div>
+      <div class="priority-row">
+        <label>중요도:
+          <select id="prioritySelect">
+            <option value="high">높음</option>
+            <option value="medium" selected>보통</option>
+            <option value="low">낮음</option>
+          </select>
+        </label>
+      </div>
+      <div class="deadline-row">
+        <label>마감일:
+          <input id="deadlineInput" type="date">
+        </label>
+      </div>
+    </div>
+
+    <!-- 필터 탭 -->
+    <div class="filter-tabs">
+      <button class="tab active" data-filter="all">전체</button>
+      <button class="tab" data-filter="active">미완료</button>
+      <button class="tab" data-filter="completed">완료</button>
+    </div>
+
+    <!-- 목록 -->
+    <ul id="todoList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
